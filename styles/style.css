@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inder&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* font colection */
-/* font-family: "Inder", serif;
+/* font-family: "Inter", serif;
 font-family: "Poppins", serif; */
 /* root styles */
+/* font-family: "Roboto", serif; */
 :root{
     --nav-footer-font-size: 1.5rem;
     --card-font-size:1.75rem;
@@ -157,7 +160,69 @@ main{
 .card .card-descrip{
     font-size: .87rem;
     color: #787885;
+    margin: 0;
 }
+.card div h4{
+    margin: 0 auto 17px auto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Inter", serif;
+}
+.card-stars{
+    display: flex;
+    max-width: 122px;justify-content: space-between;
+    margin-bottom:7px ;
+    /* gap: 10px; */
+    /* border: solid 1px salmon; */
+}
+
+.card-stars .fa-sharp{
+    color: #FB8200 ;
+    
+    height: 10.32PX;
+    width: 11.07px;
+    border: 0;
+}
+#card-star{
+    color: #5e6366;
+    font-size: .87rem;
+    font-weight: bold;
+    font-family: "Roboto", serif;
+}
+.card-button{
+    font-weight: bold;
+    color: #E02C6D;
+    border:0;
+    background: none;
+    
+    /* background-color: #ffffff; */
+}
+#card-btn{
+    margin-top: 50px ;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.featured-products{
+    margin-top: 100px;
+    /* max-width: ; */
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    border: solid salmon 1px;
+}
+.feature-products-img{
+    max-width: 404px;
+    border: solid salmon 1px;
+}
+.feature-products-img img{
+    width: 100%;
+}
+.feature-products-content{
+    max-width: 610px;
+    border: solid salmon 1px;
+}
+
 @media screen and (max-width:576px) {
 
     .navbar,
@@ -175,6 +240,10 @@ main{
         flex-wrap: wrap;
         gap: 31px;
     }
+    .card-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
 @media screen and (min-width:576px) and (max-width:992px) {
 
@@ -192,5 +261,8 @@ main{
         height: auto;
         flex-wrap: wrap;
         gap: 31px;
+    }
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
